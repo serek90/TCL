@@ -30,6 +30,13 @@ for { set i 0 } { $i < 3 } { incr i} {
     puts "\t\tlistVarA($i) = [lindex $listVarA $i]"
 }
 
+###################################################
+#append list
+###################################################
+lappend lisvarA {*}listVarB
+
+###################################################
 #spliting string to elements of list
+###################################################
 puts "\tsplit list elements"
 
