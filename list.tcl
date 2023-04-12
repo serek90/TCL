@@ -23,7 +23,7 @@ puts "\tlistVarC = listVarA + listVarB : $listVarC"
 puts "\t\tlistVarC->4 = [lindex $listVarC 4]"
 
 #length of list
-puts "\tlistVar length = [llength $listVarA]"
+puts "\tlistVarA length = [llength $listVarA]"
 
 puts "\tpriniting list elements:"
 for { set i 0 } { $i < 3 } { incr i} {
@@ -31,12 +31,28 @@ for { set i 0 } { $i < 3 } { incr i} {
 }
 
 ###################################################
+# do list contain
+###################################################
+puts "\n\nlist containing"
+
+if { "yellow" ni $listVarA } {
+    puts "\tlistVarA does not contain yellow element"
+}
+
+if { "red" in $listVarA } {
+    puts "\tlistVarA contain red element"
+}
+
+###################################################
 #append list
 ###################################################
-lappend lisvarA {*}listVarB
+puts "\n\nlist appending"
+puts "\tlistVarA before: $listVarA"
+lappend listVarA {*}$listVarB
+puts "\tlistVarA affter: $listVarA"
 
 ###################################################
 #spliting string to elements of list
 ###################################################
-puts "\tsplit list elements"
+puts "\n\nsplit list elements"
 
